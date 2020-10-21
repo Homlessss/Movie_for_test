@@ -206,20 +206,3 @@ controller.addOnClickEvent = function (nodeList) {
     }
 }
 
-module.exports = {
-    previewImg,
-    addFilm,
-    addGenre,
-    initFilm,
-    errorHandler,
-    errorMessageHandler,
-    setRealeaseDate,
-    setRated,
-    prepareData,
-    getAllFilm,
-    generateState,
-    generateAverageScore,
-    adminManagementSwitchPage,
-    setNumberOfPage,
-    addOnClickEvent
-}

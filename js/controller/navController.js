@@ -29,9 +29,9 @@ controller.showSearchResult = function (searchInput) {
     return searchResult;
 }
 
-module.exports = {
-    signOut,
-    setNavInfo,
-    showSearchResult,
-    filmFilter
+controller.searchResult = (searchInput) => {
+    if (controller.showSearchResult(searchInput))
+        return true;
+    else return false;
 }
+

@@ -3,6 +3,3 @@ model.loadAllFilms = async function () {
     return querySnapshots;
 }
 
-module.exports = {
-    loadAllFilms
-}

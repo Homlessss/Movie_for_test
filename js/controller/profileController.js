@@ -23,7 +23,3 @@ controller.updateDisplayName = function (name) {
 
 }
 
-module.exports = {
-    updateDisplayName,
-    updateAuthDisplayName
-}

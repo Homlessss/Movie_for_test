@@ -105,13 +105,3 @@ controller.addSlideBtnEvent = function () {
     }
 }
 
-module.exports = {
-    addHomeComponents,
-    addShownFilmComponent,
-    addHomePaginateEvent,
-    resetPaginateColor,
-    castVideoTrailerEvent,
-    castVideoTrailer,
-    addCommingSoonFilmComponent,
-    addSlideBtnEvent
-}

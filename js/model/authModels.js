@@ -26,8 +26,3 @@ model.login = async function (loginValue) {
     }
 }
 
-module.exports = {
-    register,
-    firstUpdateProfile,
-    login
-}

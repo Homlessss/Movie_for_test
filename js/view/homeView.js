@@ -53,10 +53,3 @@ view.renderCommingSoonFilm = function (commingSoonFilms) {
         `
     }
 }
-
-module.exports = {
-    homeScreen,
-    homeShownFilmComponent,
-    setHomeVideoTrailer,
-    renderCommingSoonFilm
-}

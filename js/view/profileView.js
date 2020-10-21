@@ -122,22 +122,3 @@ view.uploadAvaHandler = function () {
         loader.style.visibility = 'hidden'
     }
 }
-
-module.exports = {
-    profileScreen,
-    initProfileScreen,
-    addProfileUpdateEvent,
-    onUnlockForm,
-    onEnableFormBtn,
-    onUpdateDisplayName,
-    showUploadAvaModal,
-    showAvaModal,
-    offAvaModal,
-    onCancelUpload,
-    uploadAvaHandler,
-    onPrepareImg,
-    onloadend,
-    onUploadAva,
-    showLoaderIcon,
-    offLoaderIcon
-}

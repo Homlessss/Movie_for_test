@@ -219,26 +219,3 @@ controller.updateThreadScore = function (film) {
     footerReview.innerText = numOfReviews + ' bình luận';
 }
 
-module.exports = {
-    initThreadPage,
-    addVideoEvent,
-    showVideo,
-    hideVideo,
-    addThreadInfo,
-    addThreadReviews,
-    addThreadRelated,
-    sortRelatedFilm,
-    addRelatedFilm,
-    addRelatedFilmEvent,
-    listenReviewsUpdate,
-    sortReview,
-    setReviewSortMethod,
-    onReactSort,
-    onDateSort,
-    onVisibilitySortBtn,
-    setReactionColor,
-    addReviewBtnEvent,
-    onReview,
-    addReactBtnEvent,
-    updateThreadScore
-}

@@ -18,8 +18,12 @@ model.getAllFilm = async function () {
     return filmDatas
 }
 
-module.exports = {
-    addFilm,
-    convertImgToURL,
-    getAllFilm
-}
+
+// Test response data
+// describe('Response data', () => {
+//     it('Response data', () => {
+//         expect(model.getAllFilm()).toEqual(jasmine.any());
+//     });
+    
+// })
+

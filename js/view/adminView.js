@@ -83,13 +83,3 @@ view.adminPostFilmScreen = function () {
     }
 }
 
-module.exports = {
-    adminManagementScreen,
-    adminPostFilmScreen,
-    adminAddTableRow,
-    adminPostFilmScreen,
-    initScreen,
-    addFilmHandler,
-    addCheckBoxEvent,
-    onChangeCheckBoxColor
-}

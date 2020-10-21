@@ -12,7 +12,3 @@ controller.login = function (loginValue) {
     }
 }
 
-module.exports = {
-    register,
-    login
-}

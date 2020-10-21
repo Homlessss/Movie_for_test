@@ -157,27 +157,73 @@ controller.validateReviewForm = function (form) {
     if (!firebase.auth().currentUser) {
         throw new Error('Vui lòng đăng nhập để đánh giá phim')
     }
-    if (!form.star.value) {
-        throw new Error('Bạn chưa đánh giá phim')
-    }
-    // if (!form.content.value) {
-    //     throw new Error('Bình luận không được để trống')
-    // }
 }
 
-module.exports = {
-    validateEmail,
-    validatePassword,
-    validateReviewForm,
-    validateLoginForm,
-    generateDate,
-    generateScore,
-    getReviewerInfo,
-    convertFilmData,
-    getReviewInfo,
-    getReviewerInfo,
-    loadAllFilms,
-    paginate,
-    addVoteFilmURLEvent,
-    validateReviewForm
-}
+// TEST
+//  validate register form
+let registerValuable = {firstName: 'Mai Quang', lastName: 'Khải', email: 'mkhai2308@gmail.com', password: '0386885935k', confirmPassword: '0386885935k'}
+
+describe('Account', () => {
+    it("Validate register form", () => {
+        expect(controller.validateRegisterForm(registerValuable)).toBeTruthy();
+    })
+});
+
+// test login form
+let loginValuable = {email: 'email@example.com', password: 'password'}
+
+describe ('Account', () => {
+    it("Validate login form", () => {
+        expect(controller.validateLoginForm(loginValuable)).toBeTruthy();
+    });
+    
+})
+
+// test validate password 
+describe ('Account', () => {
+    it('Validate password', () => {
+        expect(registerValuable.password).toBe(registerValuable.confirmPassword);
+    }); 
+});
+
+// test exception check
+// test validate review form 
+describe ('Validate review form', () => {
+    it('Validate review form', () => {
+        expect(controller.validateReviewForm).toThrow();
+    });
+    
+});
+
+// test validate register form
+describe ('exception check validate register form', () => {
+    it('exception check validate register form', () => {
+        expect(controller.validateRegisterForm).toThrow();
+    });
+    
+})
+
+// test validate login form
+describe ('exception check validate login form', () => {
+    it('exception check validate login form', () => {
+        expect(controller.validateLoginForm).toThrow();
+    })
+})
+
+// Test type of response data
+// generateIframe
+describe('Type of data', () => {
+    it('Type of response data', () => {
+        expect(controller.generateIframe('https://www.youtube.com/watch?v=XRm1P7oGpMQ')).toEqual(jasmine.any(String));
+    });
+    
+})
+
+// paginate
+describe('Type of data', () => {
+    it('Type of response data', () => {
+        expect(controller.paginate([1,5,2,3,7], 3)).toEqual(jasmine.any(Array));
+    });
+    
+})
+

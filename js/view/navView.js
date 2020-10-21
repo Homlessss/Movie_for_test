@@ -99,17 +99,3 @@ view.navAddSettingMenuEvent = function () {
     }
 }
 
-module.exports = {
-    nav,
-    initNav,
-    addSearchSuggestions,
-    onInputFocus,
-    offClick,
-    renderSearchResult,
-    addSearchEvent,
-    addFilmURLEvent,
-    guestNav,
-    userNav,
-    adminNav,
-    navAddSettingMenuEvent
-}
