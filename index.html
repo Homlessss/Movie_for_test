@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Center</title>
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/adminManagement.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/thread.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/adminAddFilm.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="nav-bar"></div>
+    <div id="app"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-storage.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCt3kkTChAUDVAzYb68h2NLhr8sM__c5fc",
+            authDomain: "codeintensive.firebaseapp.com",
+            databaseURL: "https://codeintensive.firebaseio.com",
+            projectId: "codeintensive",
+            storageBucket: "codeintensive.appspot.com",
+            messagingSenderId: "589315797473",
+            appId: "1:589315797473:web:d22079f13ede8d33"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./js/components/indexComponents.js"></script>
+    <script src="./js/components/authComponents.js"></script>
+    <script src="./js/components/adminComponents.js"></script>
+    <script src="./js/components/homeComponents.js"></script>
+    <script src="./js/components/navComponents.js"></script>
+    <script src="./js/components/threadComponents.js"></script>
+    <script src="./js/components/profileComponents.js"></script>
+    <script src="./js/controller/indexController.js"></script>
+    <script src="./js/controller/authControlller.js"></script>
+    <script src="./js/controller/helperController.js"></script>
+    <script src="./js/controller/adminController.js"></script>
+    <script src="./js/controller/navController.js"></script>
+    <script src="./js/controller/homeController.js"></script>
+    <script src="./js/controller/threadController.js"></script>
+    <script src="./js/controller/profileController.js"></script>
+    <script src="./js/model/indexModels.js"></script>
+    <script src="./js/model/authModels.js"></script>
+    <script src="./js/model/adminModels.js"></script>
+    <script src="./js/model/homeModels.js"></script>
+    <script src="./js/view/indexView.js"></script>
+    <script src="./js/view/authView.js"></script>
+    <script src="./js/view/helperView.js"></script>
+    <script src="./js/view/adminView.js"></script>
+    <script src="./js/view/homeView.js"></script>
+    <script src="./js/view/navView.js"></script>
+    <script src="./js/view/threadView.js"></script>
+    <script src="./js/view/profileView.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
