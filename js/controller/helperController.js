@@ -1,3 +1,5 @@
+const controller = require('./indexController');
+
 controller.validateEmail = function (email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
@@ -159,70 +161,25 @@ controller.validateReviewForm = function (form) {
     }
 }
 
-// TEST
-//  validate register form
-let registerValuable = {firstName: 'Mai Quang', lastName: 'Khải', email: 'mkhai2308@gmail.com', password: '0386885935k', confirmPassword: '0386885935k'}
+function checkRegister(registerValue) {
+    return controller.validateRegisterForm;
+}
 
-describe('Account', () => {
-    it("Validate register form", () => {
-        expect(controller.validateRegisterForm(registerValuable)).toBeTruthy();
-    })
-});
+function checkLogin(loginValue) {
+    return controller.validateLoginForm;
+}
 
-// test login form
-let loginValuable = {email: 'email@example.com', password: 'password'}
+function checkExceptionReviewForm(form) {
+    return controller.validateReviewForm;
+}
 
-describe ('Account', () => {
-    it("Validate login form", () => {
-        expect(controller.validateLoginForm(loginValuable)).toBeTruthy();
-    });
-})
+function checkTypeOfGenerateIframe(url) {
+    return controller.generateIframe;
+}
 
-// test validate password 
-describe ('Account', () => {
-    it('Validate password', () => {
-        expect(registerValuable.password).toBe(registerValuable.confirmPassword);
-    }); 
-});
-
-// test exception check
-// test validate review form 
-describe ('Validate review form', () => {
-    it('Validate review form', () => {
-        expect(controller.validateReviewForm).toThrow();
-    });
-    
-});
-
-// test validate register form
-describe ('exception check validate register form', () => {
-    it('exception check validate register form', () => {
-        expect(controller.validateRegisterForm).toThrow();
-    });
-    
-})
-
-// test validate login form
-describe ('exception check validate login form', () => {
-    it('exception check validate login form', () => {
-        expect(controller.validateLoginForm).toThrow();
-    })
-})
-
-// Test type of response data
-// generateIframe
-describe('Type of data', () => {
-    it('Type of response data', () => {
-        expect(controller.generateIframe('https://www.youtube.com/watch?v=XRm1P7oGpMQ')).toEqual(jasmine.any(String));
-    });
-    
-})
-
-// paginate
-describe('Type of data', () => {
-    it('Type of response data', () => {
-        expect(controller.paginate([1,5,2,3,7], 3)).toEqual(jasmine.any(Array));
-    });
-    
-})
-
+module.exports = {
+    checkRegister: checkRegister,
+    checkLogin: checkLogin,
+    checkExceptionReviewForm: checkExceptionReviewForm,
+    checkTypeOfGenerateIframe: checkTypeOfGenerateIframe,
+}

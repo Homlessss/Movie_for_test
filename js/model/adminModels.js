@@ -18,12 +18,3 @@ model.getAllFilm = async function () {
     return filmDatas
 }
 
-
-// Test response data
-// describe('Response data', () => {
-//     it('Response data', () => {
-//         expect(model.getAllFilm()).toEqual(jasmine.any());
-//     });
-    
-// })
-

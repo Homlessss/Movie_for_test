@@ -16,3 +16,7 @@ controller.initAuth = function () {
         }
     })
 }
+
+module.exports = {
+    controller: controller
+}

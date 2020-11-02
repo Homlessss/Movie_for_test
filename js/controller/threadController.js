@@ -1,3 +1,6 @@
+const { func } = require('assert-plus');
+const controller = require('./indexController');
+
 controller.initThreadPage = function (id) {
     let filmData = model.allFilmDatas.find(function (film) {
         return film.id === id;
@@ -219,3 +222,26 @@ controller.updateThreadScore = function (film) {
     footerReview.innerText = numOfReviews + ' bình luận';
 }
 
+function checkAddVideosTrailer() {
+    controller.addVideoEvent;
+};
+
+function checkInitThreadPage(id) {
+    return controller.initThreadPage;
+};
+
+function checkAddThreadRelease(id) {
+    return controller.addThreadRelease;
+}
+
+function checkListenReviewUpdate(id, sortMethod) {
+    return controller.listenReviewUpdate;
+};
+
+module.exports = {
+    checkAddVideosTrailer: checkAddVideosTrailer,
+    checkInitThreadPage: checkInitThreadPage,
+    checkAddThreadRelease: checkAddThreadRelease,
+    checkListenReviewUpdate: checkListenReviewUpdate,
+    
+}
