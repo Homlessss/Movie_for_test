@@ -176,7 +176,6 @@ describe ('Account', () => {
     it("Validate login form", () => {
         expect(controller.validateLoginForm(loginValuable)).toBeTruthy();
     });
-    
 })
 
 // test validate password 
